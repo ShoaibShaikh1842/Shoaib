@@ -1,16 +1,18 @@
 #include<iostream>
 #include<fstream>
-using namespaces std;
+using namespace std;
 int main()
 {
-    char ch;
     fstream fp;
-    fp=fopen("a.txt","ios::in");
-    while(ch!=-1)
-        
+    char ch;
+
+    fp.open("a.txt",ios::in);
+    while(!fp.eof())
+
     {
         fp>>ch;
-        
+        cout<<(char)ch;
     }
-    
+    fp.close();
+    return 0;
 }
